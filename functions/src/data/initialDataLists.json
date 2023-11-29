@@ -1,0 +1,37 @@
+{
+    "kindOfFlow":[
+        "Receita","Despesa"
+    ],
+    "kindOfRevenue":[
+        "Taxa de condomínio","Cota extra"
+    ],
+    "kindOfExpense":[
+        "Manutenção", "Decoração"
+    ],
+    "apartments":[
+        {
+            "number":102,
+            "side":"A",
+            "owner":{
+                "name":"Anderson silva",
+                "contact":"81999999"
+            },
+            "tenant":{
+                "name":"Fernanda Souza",
+                "contact":"82999999"
+            }
+        },
+        {
+            "number":103,
+            "side":"A",
+            "owner":{
+                "name":"Fábio Oliveira",
+                "contact":"83999999"
+            },
+            "tenant":{
+                "name":"Jorge Pereira",
+                "contact":"84999999"
+            }
+        }
+    ]
+}
