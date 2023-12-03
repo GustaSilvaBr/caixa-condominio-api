@@ -1,7 +1,8 @@
 const functions = require("firebase-functions");
 const cors = require('cors');
 const express = require('express');
-const routes = require('./src/routes/index');
+const indexRouter = require('./src/routes/index');
+const apartmentRouter = require('./src/routes/apartmentsRoutes');
 
 const condominiumCashFlowApi = express();
 
@@ -17,6 +18,7 @@ condominiumCashFlowApi.use(cors(corsOptions));
 
 condominiumCashFlowApi.use(express.json());
 
-condominiumCashFlowApi.use(routes);
+condominiumCashFlowApi.use(indexRouter);
+condominiumCashFlowApi.use(apartmentRouter);
 
 exports.condominiumCashFlowApi = functions.https.onRequest(condominiumCashFlowApi);
