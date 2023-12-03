@@ -9,26 +9,6 @@
             "name":"Despesa"
         }
     ],
-    "kindOfRevenue":[
-        {
-            "id":"t1",
-            "name":"Taxa de condomínio"
-        },
-        {
-            "id":"c1",
-            "name":"Cota extra"
-        }
-    ],
-    "kindOfExpense":[
-        {
-            "id":"m1",
-            "name":"Manutenção"
-        },
-        {
-            "id":"de1",
-            "name":"Decoração"
-        }
-    ],
     "apartments":[
         {
             "id":"ap102",
@@ -57,12 +37,12 @@
             }
         }
     ],
-    "flow":[
+    "cashFlow":[
         {
             "id":"f1",
             "kindOfFlow":"kindOfFlow/r1",
             "apartment":"apartments/ap102",
-            "kindOfRevenue":"kindOfRevenue/t1",
+            "desc":"Taxa de condominio",
             "date":1701271978303,
             "value":30
         },
@@ -70,7 +50,7 @@
             "id":"f2",
             "kindOfFlow":"kindOfFlow/d1",
             "apartment":"apartments/ap102",
-            "kindOfExpense":"kindOfExpense/m1",
+            "desc":"Pintura",
             "date":1701271978200,
             "value":30
         }
