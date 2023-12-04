@@ -3,6 +3,7 @@ const cors = require('cors');
 const express = require('express');
 const indexRouter = require('./src/routes/index');
 const apartmentRouter = require('./src/routes/apartmentsRoutes');
+const kindOfFlowRouter = require('./src/routes/kindOfFlowRoute');
 
 const condominiumCashFlowApi = express();
 
@@ -20,5 +21,6 @@ condominiumCashFlowApi.use(express.json());
 
 condominiumCashFlowApi.use(indexRouter);
 condominiumCashFlowApi.use(apartmentRouter);
+condominiumCashFlowApi.use(kindOfFlowRouter);
 
 exports.condominiumCashFlowApi = functions.https.onRequest(condominiumCashFlowApi);
