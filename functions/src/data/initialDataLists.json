@@ -1,26 +1,16 @@
 {
-    "kindOfFlow":[
-        {
-            "id":"r1",
-            "name":"Receita"
-        },
-        {
-            "id":"d1",
-            "name":"Despesa"
-        }
-    ],
     "apartments":[
         {
             "id":"ap102",
-            "number":102,
+            "aptNumber":102,
             "side":"A",
             "owner":{
                 "name":"Anderson silva",
-                "contact":"81999999"
+                "phoneNumber":"81999999"
             },
             "tenant":{
                 "name":"Fernanda Souza",
-                "contact":"82999999"
+                "phoneNumber":"82999999"
             }
         },
         {
@@ -29,29 +19,29 @@
             "side":"A",
             "owner":{
                 "name":"Fábio Oliveira",
-                "contact":"83999999"
+                "phoneNumber":"83999999"
             },
             "tenant":{
                 "name":"Jorge Pereira",
-                "contact":"84999999"
+                "phoneNumber":"84999999"
             }
         }
     ],
     "cashFlow":[
         {
             "id":"f1",
-            "kindOfFlow":"kindOfFlow/r1",
+            "isRevenue":true,
             "apartment":"apartments/ap102",
             "desc":"Taxa de condominio",
-            "date":1701271978303,
+            "paymentDate":1701271978303,
             "value":30
         },
         {
             "id":"f2",
-            "kindOfFlow":"kindOfFlow/d1",
+            "isRevenue":false,
             "apartment":"apartments/ap102",
             "desc":"Pintura",
-            "date":1701271978200,
+            "paymentDate":1701271978200,
             "value":30
         }
     ]

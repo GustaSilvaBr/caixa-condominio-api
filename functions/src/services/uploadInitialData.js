@@ -21,10 +21,10 @@ async function uploadCashFlowData(){
 
         return (
             setDoc(doc(db, COLLECTIONS_NAMES.cashFlow, cashFlow.id), {
-                kindOfFlow: doc(db, cashFlow.kindOfFlow), //It is interpreting the key as collection and the value as id.
-                apartment:doc(db, cashFlow.apartment),
+                isRevenue: cashFlow.isRevenue, 
+                apartment:doc(db, cashFlow.apartment),//It is interpreting the key as collection and the value as id.
                 desc:cashFlow.desc,
-                date: Timestamp.fromDate(new Date('December 10, 2023')),
+                paymentDate: Timestamp.fromDate(new Date('December 10, 2023')),
                 value:30
             })
         )
@@ -37,7 +37,6 @@ async function uploadCashFlowData(){
 async function uploadFullInitialData(){
     try{
         await Promise.all([
-            uploadGenericData(initialData.kindOfFlow, COLLECTIONS_NAMES.kindOfFlow),
             uploadGenericData(initialData.apartments, COLLECTIONS_NAMES.apartments),
             uploadCashFlowData()
         ]);
