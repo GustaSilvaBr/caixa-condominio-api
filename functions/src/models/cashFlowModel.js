@@ -12,10 +12,7 @@ module.exports = {
     for (let i = 0; i < cashFlowDocs.size; i++) {
       const cashFlowDoc = cashFlowDocs.docs[i];
 
-      const [apartmentDoc, kindOfFlowDoc] = await Promise.all([
-        getDoc(cashFlowDoc.data().apartment),
-        getDoc(cashFlowDoc.data().kindOfFlow),
-      ]);
+      const apartmentDoc = await getDoc(cashFlowDoc.data().apartment);
 
       const cashFlowToPush = {
         id: cashFlowDoc.id,
@@ -23,7 +20,7 @@ module.exports = {
         date: cashFlowDoc.data().date,
         value: cashFlowDoc.data().value,
         apartment: apartmentDoc.data(),
-        kindOfFlow: kindOfFlowDoc.data(),
+        isRevenue: cashFlowDoc.data().isRevenue,
       };
 
       cashFlowFound.push(cashFlowToPush);
